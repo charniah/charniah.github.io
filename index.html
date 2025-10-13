@@ -333,26 +333,35 @@
     </section>
         
     <section>
-      <h2><b>IMAGES GALLERY</b></h2>
-      <div class="gallery">
-        <style>
-          .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-          }
-          .gallery img {
-            width: 200px;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-          }            
-        </style>
-        <img src="images/voURe - DA.JPG" alt="Data Analytics Certificate by RevoU">
-        <img src="images/SP - Intermediate.JPG" alt="English Intermediate-1 Certificate by Speaking Partner">
-      </div>
-    </section>    
+      <h2>
+        <!-- SVG Gallery Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM5 5h14v9.59l-3.3-3.29a.996.996 0 0 0-1.41 0L10 15l-2.29-2.29
+                   a.996.996 0 0 0-1.41 0L5 14.59V5zm0 14v-1.59 l3.3-3.3 2.29 2.3a.996.996 0 0 0 1.41 0L16 13l3 3V19H5zm9-9a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+        </svg>
+        <b>GALLERY</b>
+      </h2>
 
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px;">
+        <!-- Images.jpg Gambar -->
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+          <img src="images/voURe - DA.JPG" alt="Data Analytics Certificate by RevoU" style="width:100%; display:block;">          
+        </div>           
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+          <img src="images/SP - Intermediate.JPG" alt="English Intermediate-1 Certificate by Speaking Partner" style="width:100%; display:block;">
+        </div>
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+          <img src="images/Mandarin_Basic.PNG" alt="Mandarin Beginner Certificate by Punyaku LearningCommunity" style="width:100%; display:block;">
+        </div>
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+          <img src="images/Remote Work Academy.PNG" alt="Remote Worker Certificate" style="width:100%; display:block;">
+        </div>
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+          <img src="images/Speaking-TOEFL.PNG" alt="Certificate by LifePlanner Course" style="width:100%; display:block;">
+        </div>
+      </div>
+    </section>
+    
     <div class="footer">
       © 2025 Citra Harniah | Portfolio Website 
     </div>
