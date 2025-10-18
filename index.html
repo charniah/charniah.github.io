@@ -7,12 +7,12 @@
   <style>
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #222;
+      background-color: #f9f9f7;
+      color: #333;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-    }
+    }    
 
     header {
       background: linear-gradient(90deg, #1e3c72, #2a5298);
@@ -41,6 +41,112 @@
       padding: 40px 50px;
     }
 
+    /* ==== HERO SECTION ==== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      background-color: #fefefe;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }    
+    .hero-text {
+      flex: 1;
+      padding-right: 40px;
+      min-width: 300px;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInText 1.2s ease-out forwards;
+    }    
+    .hero-text h1 {
+      font-size: 2.4rem;
+      color: #003366;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }    
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }    
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }    
+    .btn-primary {
+      background-color: #003f6b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }    
+    .btn-primary:hover {
+      background-color: #005fa3;
+      transform: translateY(-2px);
+    }    
+    .btn-outline {
+      border: 2px solid #003f6b;
+      color: #003f6b;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }    
+    .btn-outline:hover {
+      background-color: #003f6b;
+      color: white;
+      transform: translateY(-2px);
+    }    
+    .hero img {
+      width: 420px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInImage 1.4s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+    
+    /* ==== ANIMATIONS ==== */
+    @keyframes slideInText {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }    
+    @keyframes slideInImage {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }      
+      .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        animation: fadeIn 1.2s ease-out forwards;
+      }      
+      .hero img {
+        width: 100%;
+        max-width: 400px;
+        animation: fadeIn 1.4s ease-out forwards;
+      }      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }    
+    }
+
     h2 {
       color: #1e3c72;
       border-bottom: 2px solid #2a5298;
@@ -49,13 +155,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-
-    h2 svg {
-      width: 22px;
-      height: 22px;
-      fill: #2a5298;
-    }
+    }    
 
     h3 {
       color: #2a5298;
@@ -67,7 +167,6 @@
       list-style: none;
       padding-left: 15px;
     }
-
     ul li::before {
       content: "• ";
       color: #2a5298;
@@ -158,24 +257,38 @@
   </header>
 
   <div class="container">
+    
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Mining, Supply Chain &<br>Financial Operations Expert</h1>        
+      </div>            
+    </section>
 
-    <section>
-      <h2>
-        <!-- 🎯 About Me Icon -->        
-        <b>🎯 ABOUT ME</b>        
-      </h2>
-      <p>
-        I am a results-oriented professional with experience in the nickel mining sector, specializing in marketing, purchasing, and port operations. 
-        Currently expanding expertise in financial administration as a Remote Virtual Bookkeeper.
-        Proven ability to bridge complex field logistics with precise administrative and financial management to drive operational efficiency.
-      </p>
-      <ul>
-        <b>My Core Competencies:</b>
-        <li>Marketing & Purchasing Strategy</li>
-        <li>Supply Chain Logistics (Shipping & Barging)</li>
-        <li>Production Planning & Inventory Control (PPIC)</li>
-        <li>Virtual Bookkeeping & Financial Reporting</li>
-      </ul>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>
+          <!-- 🎯 About Me Icon -->
+          <b>🎯 ABOUT ME</b>
+        </h2>
+        <p>
+          I am a results-oriented professional with experience in the nickel mining sector, specializing in marketing, purchasing, and port operations. 
+          Currently expanding expertise in financial administration as a Remote Virtual Bookkeeper. Proven ability to bridge complex field logistics 
+          with precise administrative and financial management to drive operational efficiency.
+        </p>
+        <ul>
+          <b>My Core Competencies:</b>
+          <li>Marketing & Purchasing Strategy</li>
+          <li>Supply Chain Logistics (Shipping & Barging)</li>
+          <li>Production Planning & Inventory Control (PPIC)</li>
+          <li>Virtual Bookkeeping & Financial Reporting</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Get In Touch</a>
+          <a href="#experience" class="btn-outline">View Experience</a>
+        </div>      
+      </div>
+
+      <img src="images/AI Gem - AboutMe.png" alt="About Me Illustration">
     </section>
 
     <section>
@@ -415,6 +528,7 @@
           <p><a href="imgaicertf"><img src="project/AI - Certf.jpg" alt="Artificial Intelligence Certificate by Skilvul" style="width:100%;"></a></p>
           <p><a href="project/AI_Pemanfaatan di Dunia Kerja.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Pemanfaatan AI Di Kantor (PDF)</a></p>
           <p><a href="project/AI_Privasi & Etika dalam Pemanfaatan.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Etika & Privasi dalam Pemanfaatan AI (PDF)</a></p>
+          <p><a href="project/Project_Portfolio Deck.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Project_Portfolio Deck (PDF)</a></p>
           <p><a href="project/Bias Gender_Di Dunia Kerja.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Bias Gender Di Sektor Pertambangan (PDF)</a></p>
           <p><a href="project/Bias_Hambatan yang dirasakan.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Bias_Hambatan Di Tempat Kerja (PDF)</a></p>
           <p><a href="project/Project_LinkedIn Post_Gender Equality Education.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Project_LinkedIn Post_Gender Equality Education (PDF)</a></p>
