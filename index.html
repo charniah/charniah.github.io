@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Professional portfolio of Citra Harniah – experienced in mining operations, bookkeeping, and project coordination.">
+  <meta name="theme-color" content="#1e3c72"> /* Mobile Friendly, agar tampilan di browser mobile (Android) ikut berubah */
   <title>Citra Harniah – Professional Portfolio and Career Highlights</title>
-  <style>
-    html { scroll-behavior: smooth; }
+  <style>    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* memberi jarak agar tidak lompat ke atas */
+    }
+    :target {      
+      scroll-margin-top: 0; /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */
+    }
     body { font-family: "Palatino Linotype"; background-color: #f9f9f7; color: #333; line-height: 1.6; margin: 0; padding: 0; }
     header { background: linear-gradient(90deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 40px 20px; }
     header h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
@@ -41,7 +48,14 @@
       transform: translateX(50px);
       animation: slideInImage 1.4s ease-out forwards;
       animation-delay: 0.5s;
-    }    
+    }
+    section {
+      margin-bottom: 40px; /* spacing bawah antar section agar tampilan tidak padat di layar kecil */      
+    }
+    summary:hover {
+      color: #005fa3;
+      transition: 0.3s ease; /* hover transition, agar saat diklik terasa interaktif */
+    }
     /* ==== ANIMATIONS ==== */
     @keyframes slideInText {
       from { opacity: 0; transform: translateX(-50px); }
@@ -108,12 +122,17 @@
       align-items: center;
       overflow: auto;
     }    
-    .lightbox img {
+    .lightbox img {      
       max-width: 90%;
       max-height: 80%;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255,255,255,0.3);
-    }    
+      animation: fadeInLightbox 0.4s ease-in; /* fade-in animation saat gambar muncul di lightbox */
+    }
+    @keyframes fadeInLightbox {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
     .lightbox:target {
       display: flex;
     }    
@@ -251,7 +270,6 @@
         padding: 14px 6px;
       } 
     }
-
     @media (max-width: 768px) {
       .container {
         padding: 25px;
@@ -272,7 +290,10 @@
   </header>
 
   <div class="container">
-    <main>
+    <main id="main-content">
+      <!-- Tambahkan skip link untuk aksesibilitas -->
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+
       <section>
         <h2>          
           <!-- 🎯 About Me Icon -->
