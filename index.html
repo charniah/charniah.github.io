@@ -9,18 +9,18 @@
   <title>Citra Harniah – Professional Portfolio</title>
   <style>    
     html {
-      scroll-behavior: smooth;
+      /* scroll-behavior: smooth; */
       scroll-padding-top: 80px; /* memberi jarak agar tidak lompat ke atas */
     }
     :target {      
       scroll-margin-top: 0; /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */
     }
-    body { font-family: "Palatino Linotype", serif; background-color: #f9f9f7; color: #333; line-height: 1.6; margin: 0; padding: 0; }
+    body { font-family: "Palatino Linotype"; background-color: #f9f9f7; color: #333; line-height: 1.6; margin: 0; padding: 0; }
     
     /* HEADER */
     header { background: linear-gradient(90deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 40px 20px; position: sticky; top: 0; z-index: 100; }
     header h1 { margin: 0; font-size: 2rem; letter-spacing: 0.5px; animation: fadeSlideDown 1s ease; }
-    //* header p { margin: 5px 0; font-size: 1rem; } *//
+    header p { margin: 5px 0; font-size: 1rem; }
 
     /* MAIN CONTAINER */
     .container { max-width: 900px; margin: 40px auto; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 40px 50px; }
@@ -38,8 +38,8 @@
       from { opacity: 0; transform: scale(0.97); }
       to { opacity: 1; transform: scale(1); }
     }
-    //* @keyframes slideInText { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } } *//    
-    //* @keyframes slideInImage { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } } *//
+    @keyframes slideInText { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }    
+    @keyframes slideInImage { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } } 
 
     /* TITLES & TEXT */
     h2 { font-size: 1.4rem; color: #1e3c72; border-bottom: 2px solid #2a5298; padding-bottom: 5px; margin-top: 40px; display: flex; align-items: center; gap: 8px; }
@@ -82,10 +82,10 @@
       transform: translateX(50px);
       animation: fadeSlideUp 1.4s ease forwards; //* slideInImage, ease-out *//
       animation-delay: 0.4s;
-      //* height: auto; *//   
+      height: auto;   
     }
-    //* .hero-text h1 { font-size: 2.4rem; color: #003366; *biru-abu profesional*; margin-bottom: 20px; line-height: 1.3; } *//
-    //* .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; } *//
+    .hero-text h1 { font-size: 2.4rem; color: #003366; *biru-abu profesional*; margin-bottom: 20px; line-height: 1.3; } 
+    .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; } 
 
     /* BUTTONS */    
     .hero-buttons {
@@ -168,7 +168,7 @@
       transform: scale(1.03);
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
-    //* img { max-width: 100%; height: auto; } *//
+    img { max-width: 100%; height: auto; } 
 
     /* FOOTER */
     .footer {
@@ -190,7 +190,7 @@
       h2 { font-size: 1rem; }
       header h1 { font-size: 1.2rem; }
     }
-    //* @media (max-width: 900px) {
+    @media (max-width: 900px) {
       .hero {
         flex-direction: column;
         text-align: center;
@@ -209,30 +209,30 @@
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
       }    
-    } *//
-    //* section {
+    } 
+    section {
       margin-bottom: 40px; /* spacing bawah antar section agar tampilan tidak padat di layar kecil */      
-    } *//
+    } 
     
-    //* * Default link click *
+    /* Default link click */
     a {
       cursor: pointer;
     }
-    * Saat di atas gambar *
+    /* Saat di atas gambar */
     img {
       cursor: zoom-in;
     }
-    * Saat sedang loading *
+    /* Saat sedang loading */
     .loading {
       cursor: wait;
     }
-    * Drag-and-drop area *
+    /* Drag-and-drop area */
     .draggable {
       cursor: grab;
     }
     .draggable: active {
       cursor: grabbing;
-    } *//
+    } 
     
     /* ===== Small phones - max-width 480px ===== */    
     //* @media (max-width: 480px) {      
@@ -369,7 +369,7 @@
             </svg>          
           </a>
           <!-- WhatsApp Icon 💬 -->
-          <a href="https://wa.me/6281220235606" class="btn-outline" target="_blank"><em>Get in Touch</em>
+          <a href="https://wa.me/6281220235606" class="btn-outline" target="_blank"><em>Contact Me</em>
             <svg width="26" height="26" fill="#25D366" viewBox="0 0 24 24" style="vertical-align: middle;">
               <path d="M20.5 3.5c-2.3-2.3-5.3-3.5-8.5-3.5-6.6 0-12 5.4-12 12 0 2.1.6 4.2 1.7 6l-1.8 6.5 6.7-1.8c1.7.9 3.6 1.4 5.5 1.4 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.6zm-8.5 18c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-4 1 1.1-3.9-.3-.4c-1.1-1.6-1.7-3.5-1.7-5.5 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.4c.2-.2.3-.3.4-.6.1-.3 0-.5 0-.6 0-.2-.7-1.7-.9-2.3-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.2.3 2 3.2 4.9 4.5.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4 0-.1-.2-.2-.5-.4z"/>
             </svg>
@@ -468,9 +468,9 @@
                 <li>Submitted purchase orders to the Purchasing Department with detailed specifications and delivery requirements.</li>              
                 <li>Verified the types and quantities of materials received from the Purchasing Department.</li>
                 <li>Issued a loading list to assist the Purchasing Department in controlling incoming materials, considering container dimensions and warehouse capacity.</li>
-                <li>Updated warehouse stock levels for main materials, sub-materials, and finished goods.</li><br>                        
+                <li>Updated warehouse stock levels for main materials, sub-materials, and finished goods.</li>                        
           </details>          
-        </ul>     
+        </ul><br>     
       </section>
       
       <section>        
@@ -488,7 +488,7 @@
               <li>Increased data submission timeliness by 20% through streamlined reporting.</li>
               <li>Received a performance bonus based on KPI assessment results as the best employee who achieved all targets.</li>            
           </details>        
-        </ul>        
+        </ul><br>        
       </section>
       
       <section>        
@@ -499,7 +499,7 @@
               &ensp;🌟<b>Bachelor of Industrial Engineering</b> – Universitas Sangga Buana, Bandung | <em>2013</em><br>
               &ensp;🌟<b>Diploma in Logistics Business</b> – Politeknik Pos Indonesia (now <em>Universitas Logistik Bisnis Internasional</em>), Bandung | <em>2010</em>            
           </details>        
-        </ul>      
+        </ul><br>      
       </section>
       
       <section>        
@@ -523,7 +523,7 @@
               <li>Analytical Thinking, Problem Solving</li>
               <li>Data Reporting, Multitasking</li>            
           </details>        
-        </ul>      
+        </ul><br>      
       </section>
       
       <section>        
@@ -545,7 +545,7 @@
               <li>MOMS (MINERBA Online Monitoring System) – <em>Certified for reporting operational activities, assigned by PT. Cahaya Modern Metal Industry</em> – Directorate General of Mineral and Coal, Bali | <em>Nov 2018</em></li>
               <li>KITE Online System (Kemudahan Impor Tujuan Ekspor) – <em>Certified for managing export-import data, assigned by PT. Cahaya Modern Metal Industry</em> – Directorate General of Customs (DJBC), Makassar | <em>Sep 2018</em></li>                        
           </details>        
-        </ul>        
+        </ul><br>        
       </section>
       
       <section>        
@@ -556,15 +556,15 @@
               &emsp;Active Member – MOMS & ERKAB Working Group (MINERBA Online Monitoring System & Work Plan<br>
               &emsp;and Budget System) | <em>Oct 2018 – Present</em>
           </details>    
-        </ul>      
+        </ul><br>      
       </section>
       
       <section>
         <h2><b>🖼️ GALLERY</b></h2>
         <details open>          
-          <summary style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; cursor: pointer;">📸CERTIFICATES</summary>
+          <summary style="font-size: 1.0rem; font-weight: 600; color: #1e3a8a; cursor: pointer;">📸CERTIFICATES</summary>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; overflow: hidden; transition: 0.2s; img: hover;">
-            <a href="#imgcysecbasic"><img src="images/Cysec Basic Certf.webp" alt="Cybersecurity Basic Course, Certificate by Codepolitan" style="width:100%;"></a>
+            <a href="#imgcysecbasic"><img src="images/Cysec Basic Certf.JPG" alt="Cybersecurity Basic Course, Certificate by Codepolitan" style="width:100%;"></a>
             <a href="#imgsqlpython"><img src="images/Sql & Python - Basic.JPG" alt="SQL & Python (Data Analyst) Course, Certificate by DQLab" style="width:100%;"></a>
             <a href="#imgmlai"><img src="images/Mach. Learning & AI - Basic.JPG" alt="Machine Learning & Artificial Intelligence (Data Analyst) Course, Certificate by DQLab" style="width:100%;"></a>
             <a href="#imghtmlbasic"><img src="images/HTML - Basic.JPG" alt="HTML (Web Development) Course, Certificate by Skilvul" style="width:100%;"></a>
@@ -578,7 +578,7 @@
           <!-- POPUP LIGHTBOX (tanpa JavaScript) -->
           <div id="imgcysecbasic" class="lightbox">            
             <a href="#" class="close"></a>
-            <img src="images/Cysec Basic Certf.webp" alt="Cybersecurity Basic Course, Certificate by Codepolitan">
+            <img src="images/Cysec Basic Certf.JPG" alt="Cybersecurity Basic Course, Certificate by Codepolitan">
           </div>
           <div id="imgsqlpython" class="lightbox">            
             <a href="#" class="close"></a>
@@ -620,7 +620,7 @@
         <details open>          
           <summary style="font-size: 1.0rem; font-weight: 600; color: #1e3a8a; cursor: pointer;">📂LINK WOMEN & MARKODING PROJECT</summary>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; padding: 12px; background: #f9fafb; overflow: hidden; transition: 0.2s; img: hover;">           
-            <p><a href="project/AI_Pemanfaatan di Dunia Kerja.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Pemanfaatan AI Di Kantor</a></p>
+            <p><a href="#docaipemanfaatan"><doc src="project/AI_Pemanfaatan di Dunia Kerja.pdf" alt="📄 Pemanfaatan AI Di Kantor" target="_blank" style="color:#4a90e2; text-decoration:none;"></a></p>            
             <p><a href="project/AI_Privasi & Etika dalam Pemanfaatan.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Etika & Privasi dalam Pemanfaatan AI</a></p>
             <p><a href="project/Bias Gender_Di Dunia Kerja.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Bias Gender Di Sektor Pertambangan</a></p>
             <p><a href="project/Project_Portfolio Deck.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Project_Portfolio Deck</a></p>
@@ -631,6 +631,10 @@
           </div>
           
           <!-- POPUP LIGHTBOX (tanpa JavaScript) -->
+          <div id="docaipemanfaatan" class="lightbox">
+            <a href="#" class="close"></a>
+            <doc src="project/AI_Pemanfaatan di Dunia Kerja.pdf" alt="📄 Pemanfaatan AI Di Kantor">
+          </div>
           <div id="imgaicertf" class="lightbox">
             <a href="#" class="close"></a>
             <img src="project/AI - Certf.jpg" alt="Artificial Intelligence, Certificate by Skilvul">
