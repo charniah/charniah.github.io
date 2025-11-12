@@ -10,7 +10,7 @@
   <style>    
     //* html { scroll-behavior: smooth; scroll-padding-top: 80px; * memberi jarak agar tidak lompat ke atas * } *//    
     :target { scroll-margin-top: 0; * gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas * } 
-    body { font-family: "Palatino Linotype", serif; background-color: #f9f9f7; color: #333; line-height: 1.6; margin: 0; padding: 0; }
+    body { font-family: "Palatino Linotype, serif"; background-color: #f9f9f7; color: #333; line-height: 1.6; margin: 0; padding: 0; }
     
     /* HEADER */
     header { background: linear-gradient(90deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 40px 20px; position: sticky; top: 0; z-index: 100; }
@@ -79,7 +79,7 @@
       animation-delay: 0.4s;
       height: auto;   
     }
-    .hero-text h1 { font-size: 2.4rem; color: #003366; *biru-abu profesional*; margin-bottom: 20px; line-height: 1.3; } 
+    .hero-text h1 { font-size: 2.4rem; color: #003366; /* biru-abu profesional */ margin-bottom: 20px; line-height: 1.0; //* line-height: 1.3 *// } 
     .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; } 
 
     /* BUTTONS */    
@@ -506,7 +506,7 @@
           <details open>
             <summary style="color: #1e3a8a; cursor: pointer;">✅<b>Technical Skills:</b></summary>
               <li><b>Tools&emsp;&emsp;&ensp;:</b> <em>Microsoft Office (Excel formulas, Pivot Tables), Google Workspace, Visual Studio Code, GitHub, PyCharm, Notion</em></li>            
-              <li><b>Coding&emsp;&emsp; :</b> <em>Python, SQL, HTML, CSS, JavaScript</em></li>              
+              <li><b>Coding&emsp;&ensp; :</b> <em>Python, SQL, HTML, CSS, JavaScript</em></li>              
               <li><b>Data Entry :</b> <em>ERP system, MINERBA Online system, KITE Online system</em></li><br>            
           </details>
           <details open>
@@ -618,15 +618,11 @@
             <p><a href="project/Project_Portfolio Deck.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Project - Portfolio Deck</a></p>
             <p><a href="project/Bias_Hambatan yang dirasakan.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Bias - Hambatan Di Tempat Kerja</a></p>
             <p><a href="project/Project_LinkedIn Post_Gender Equality Education.pdf" target="_blank" style="color:#4a90e2; text-decoration:none;">📄 Project - LinkedIn Post - Gender Equality Education</a></p>
-            <p><a href="#imgaicertf"><img src="project/AI - Certf.jpg" alt="Artificial Intelligence, Certificate by Skilvul" style="width:100%;"></a></p>
+            <p><a href="project/AI - Certf.jpg" style="width:100%;">Artificial Intelligence Certificate</a></p>
             <p><a href="#imgaigenbarge"><img src="project/AI Gen_Barge Doc. Issuance Process Flow.jpg" alt="Barge Document Issuance Process Flow" style="width:100%;"></a></p>               
           </div>
           
-          <!-- POPUP LIGHTBOX (tanpa JavaScript) -->          
-          <div id="imgaicertf" class="lightbox">
-            <a href="#" class="close"></a>
-            <img src="project/AI - Certf.jpg" alt="Artificial Intelligence, Certificate by Skilvul">
-          </div>
+          <!-- POPUP LIGHTBOX (tanpa JavaScript) -->     
           <div id="imgaigenbarge" class="lightbox">
             <a href="#" class="close"></a>
             <img src="project/AI Gen_Barge Doc. Issuance Process Flow.jpg" alt="Barge Document Issuance Process Flow">
