@@ -175,7 +175,7 @@
     }
            
     /* RESPONSIVE (Small phones) */
-    @media (max-width: 768px) {
+    //* @media (max-width: 768px) {
       .container { padding: 25px; }
       .hero { flex-direction: column; text-align: center; }
       .hero img { width: 100%; max-width: 380px; }
@@ -184,7 +184,7 @@
       .container { margin: 16px; padding: 20px; }
       h2 { font-size: 1rem; }
       header h1 { font-size: 1.2rem; }
-    }
+    } *//
     @media (max-width: 900px) {
       .hero {
         flex-direction: column;
@@ -230,7 +230,7 @@
     } 
     
     /* ===== Small phones - max-width 480px ===== */    
-    //* @media (max-width: 480px) {      
+    @media (max-width: 480px) {      
       * Root variables (optional) to keep spacing consistent *
       :root {
         --space-xs: 8px;
@@ -321,21 +321,21 @@
         font-size: 0.85rem;
         padding: 14px 6px;
       } 
-    } *//
-    //* @media (max-width: 768px) {
+    } 
+    @media (max-width: 768px) {
       .container {
         padding: 25px;
       }
       header h1 {
         font-size: 1.6rem;
       }
-    } *//   
+    }    
   </style>
 </head>
   
 <body>
   <header>
-    <h1><b><em>Hello! 👋..&ensp;Welcome to My Portfolio 🎨🌺🌼</em></b></h1>    
+    <h1><b><em>Hello! 👋...Welcome to My Portfolio 🎨🌺🌼</em></b></h1>    
   </header>
 
   <div class="container">
@@ -355,13 +355,13 @@
         </ul><br>
         <div class="hero-buttons">          
           <!-- LinkedIn Icon 🔗 -->
-          <a href="https://www.linkedin.com/in/citraharniah" class="btn-outline" target="_blank"><em>&ensp;LinkedIn&ensp;</em>
+          <a href="https://www.linkedin.com/in/citraharniah" class="btn-outline" target="_blank" font-family="serif"><em>&ensp;LinkedIn&ensp;</em>
             <svg width="26" height="26" fill="#0A66C2" viewBox="0 0 24 24" style="vertical-align: middle;">
               <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 19h-3v-11h3v11zm-1.5-12.3c-.96 0-1.75-.79-1.75-1.75s.79-1.75 1.75-1.75 1.75.79 1.75 1.75-.79 1.75-1.75 1.75zm13.25 12.3h-3v-5.6c0-1.34-.03-3.06-1.86-3.06-1.86 0-2.15 1.45-2.15 2.96v5.7h-3v-11h2.88v1.5h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.6v6.4z"/>
             </svg>          
           </a>
           <!-- WhatsApp Icon 💬 -->
-          <a href="https://wa.me/6281220235606" class="btn-outline" target="_blank"><em>Contact Me</em>
+          <a href="https://wa.me/6281220235606" class="btn-outline" target="_blank" font-family="serif"><em>Contact Me</em>
             <svg width="26" height="26" fill="#25D366" viewBox="0 0 24 24" style="vertical-align: middle;">
               <path d="M20.5 3.5c-2.3-2.3-5.3-3.5-8.5-3.5-6.6 0-12 5.4-12 12 0 2.1.6 4.2 1.7 6l-1.8 6.5 6.7-1.8c1.7.9 3.6 1.4 5.5 1.4 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.6zm-8.5 18c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-4 1 1.1-3.9-.3-.4c-1.1-1.6-1.7-3.5-1.7-5.5 0-5.4 4.4-9.8 9.8-9.8 2.6 0 5 1 6.9 2.9 1.9 1.9 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.4c.2-.2.3-.3.4-.6.1-.3 0-.5 0-.6 0-.2-.7-1.7-.9-2.3-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.2.3 2 3.2 4.9 4.5.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4 0-.1-.2-.2-.5-.4z"/>
             </svg>
@@ -487,10 +487,10 @@
         <h2><b>🎓 EDUCATION</b></h2>
         <ul>          
           <details open>
-            <summary style="color: #1e3a8a; cursor: pointer;"></summary> 
-              &ensp;🌟<b>Bachelor of Industrial Engineering</b> – Universitas Sangga Buana, Bandung | <em>2013</em>
+            <summary style="color: #1e3a8a; cursor: pointer;">💡 📚</summary> 
+              &ensp;🏅<b>Bachelor of Industrial Engineering</b> – Universitas Sangga Buana, Bandung | <em>2013</em>
               <br>    
-              &ensp;🌟<b>Diploma in Logistics Business</b> – Politeknik Pos Indonesia (now, <em>Universitas Logistik Bisnis Internasional</em>), Bandung | <em>2010</em>            
+              &ensp;🏅<b>Diploma in Logistics Business</b> – Politeknik Pos Indonesia (now, <em>Universitas Logistik Bisnis Internasional</em>), Bandung | <em>2010</em>            
           </details>
         </ul>      
       </section>
@@ -523,7 +523,7 @@
         <h2><b>📜 CERTIFICATIONS</b></h2>
         <ul>          
           <details open>
-            <summary style="color: #1e3a8a; cursor: pointer;">📚<b>Professional Development Online Courses</b></summary>              
+            <summary style="color: #1e3a8a; cursor: pointer;">🛡️<b>Professional Development Online Courses</b></summary>              
               <li>Cybersecurity Basic Course – Codepolitan | <em>Oct 2025</em></li>
               <li>Fundamentals of SQL, Python, Machine Learning, AI – DQLab | <em>Aug 2025</em></li>
               <li>Fundamentals of HTML, CSS, JavaScript – Skilvul | <em>Jul 2025</em></li>
