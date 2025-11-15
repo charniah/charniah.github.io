@@ -9,32 +9,31 @@
   <title>Citra Harniah – Professional Portfolio</title>
   <style>    
     //* html { scroll-behavior: smooth; scroll-padding-top: 80px; * memberi jarak agar tidak lompat ke atas * } *//
-    :target { scroll-margin-top: 0; } /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */  
+    :target { scroll-margin-top: 0; !important; } /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */  
     body {
       font-family: "Palatino Linotype", serif; 
       background-color: #f9f9f7; 
       color: #333; 
-      line-height: 1.6; 
+      line-height: 1.25; //* 1.6; *//
       margin: 0; 
       padding: 0;
     }
     
     /* HEADER */
     header {
-      background-color: linear-gradient(90deg, #1e3c72, #2a5298); 
-      text-color: white; 
+      background: linear-gradient(90deg, #1e3c72, #2a5298); 
+      color: white; 
       text-align: center; 
       padding: 40px 20px; 
-      position: sticky; 
-      top: 0; 
-      z-index: 100;
+      //* position: sticky; *//
+      //* top: 0; *//
+      //* z-index: 100; *//
     }
     header h1 {
       margin: 0; 
       font-size: 2rem; 
       letter-spacing: 0.5px; 
-      animation: fadeSlideDown 1s ease; 
-      text-align: center;
+      animation: fadeSlideDown 1s ease;       
     }
     header p { margin: 5px 0; font-size: 1rem; }
 
@@ -273,7 +272,7 @@
       .container {
         max-width: 100%;
         margin: 16px;
-        padding: 20px; //* 18px; *// /* kurang dari desktop */
+        padding: 18px; //* 20px; *// /* kurang dari desktop */
         border-radius: 8px; //* 10px; *//
       }
       header {
@@ -346,7 +345,7 @@
       }
       /* Footer small */
       .footer {
-        font-size: 0.85rem;
+        font-size: 0.90rem; //* 0.85rem; *//
         padding: 14px 6px;
       } 
     } 
