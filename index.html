@@ -277,12 +277,22 @@
         border-radius: 10px; //* 8px; *//
       }
       header {
-        padding: 18px 12px; /* lebih compact */
+        padding: 18px 12px; !important; /* lebih compact */
+        background-clip: border-box !important;
+        background: linear-gradient(90deg, #1e3c72, #2a5298); !important;
+        color: white; !important;
+        text-align: center; !important; 
+        position: sticky; 
+        top: 0; 
+        z-index: 100;
       }
       header h1 {
         font-size: 1.15rem; /* ~18-20px */
         line-height: 1.0; //* 1.25; *//
-      }
+        margin: 0; 
+        letter-spacing: 0.5px; 
+        animation: fadeSlideDown 1s ease;
+      }   
       header p {        
         font-size: 0.85rem;
       }
