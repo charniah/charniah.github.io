@@ -21,13 +21,14 @@
     
     /* HEADER */
     header {
-      background: linear-gradient(90deg, #1e3c72, #2a5298); 
-      color: white; 
-      text-align: center; 
-      padding: 40px 20px; 
-      //* position: sticky; *//
-      //* top: 0; *//
-      //* z-index: 100; *//
+      background-clip: border-box !important;
+      background: linear-gradient(90deg, #1e3c72, #2a5298); !important; 
+      color: white; !important;
+      text-align: center; !important;
+      padding: 40px 20px; !important;
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
     }
     header h1 {
       margin: 0; 
@@ -272,8 +273,8 @@
       .container {
         max-width: 100%;
         margin: 16px;
-        padding: 18px; //* 20px; *// /* kurang dari desktop */
-        border-radius: 8px; //* 10px; *//
+        padding: 20px; //* 18px; *// /* kurang dari desktop */
+        border-radius: 10px; //* 8px; *//
       }
       header {
         padding: 18px 12px; /* lebih compact */
@@ -298,7 +299,7 @@
         order: 1;
       }
       .hero-text h1 {        
-        font-size: 1.25rem; /* lebih kecil agar muat */
+        font-size: 1.15rem; //* 1.25rem; *// /* lebih kecil agar muat */
         margin-bottom: 12px;
       }
       .hero-text p {
