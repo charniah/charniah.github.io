@@ -8,10 +8,10 @@
   <meta name="theme-color" content="#1e3c72"> <!-- Mobile Friendly, agar tampilan di browser mobile (Android) ikut berubah -->
   <title>Citra Harniah – Professional Portfolio</title>
   <style>    
-    //* html { scroll-behavior: smooth; scroll-padding-top: 80px; * memberi jarak agar tidak lompat ke atas * } *//
-    :target { scroll-margin-top: 0; !important; } /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */  
+    //* html { scroll-behavior: smooth; scroll-padding-top: 80px; } * memberi jarak agar tidak lompat ke atas * *//
+    //* :target { scroll-margin-top: 0; !important; } * gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas * *//  
     body {
-      font-family: "Palatino Linotype", serif; 
+      font-family: "Palatino Linotype"; 
       background-color: #f9f9f7; 
       color: #333; 
       line-height: 1.25; //* 1.6; *//
@@ -196,7 +196,7 @@
     /* FOOTER */
     .footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #555;
       margin-top: 50px;
       padding: 20px 0;
@@ -269,13 +269,18 @@
         --font-h2: 16px;
         --font-h3: 14px;
       }
-      body {
-        font-family: "Palatino Linotype"; 
-        background-color: #f9f9f7; 
-        color: #333; 
-        line-height: 1.0; 
-        margin: 0; 
-        padding: 0;
+      body {         
+        line-height: 1.0;         
+      }  
+      header {
+        padding: 18px 12px; !important; /* lebih compact */        
+      }    
+      header h1 {
+        font-size: 1.15rem; /* ~18-20px */
+        line-height: 1.0; //* 1.25; *//        
+      }   
+      header p {        
+        font-size: 0.85rem;
       }
       /* Container & page layout */
       .container {
@@ -283,23 +288,6 @@
         margin: 16px;
         padding: 18px; //* 20px; *// /* kurang dari desktop */
         border-radius: 8px; //* 10px; *//
-      }
-      header {
-        padding: 18px 12px; !important; /* lebih compact */
-        background-clip: border-box !important;
-        background: linear-gradient(90deg, #1e3c72, #2a5298); !important; 
-        color: white; !important; 
-        text-align: center; !important;         
-        position: sticky; 
-        top: 0; 
-        z-index: 100;
-      }      
-      header h1 {
-        font-size: 1.0rem; //* 1.15rem; *// /* ~18-20px */
-        line-height: 1.0; //* 1.25; *//        
-      }   
-      header p {        
-        font-size: 0.85rem;
       }
       /* HERO adjustments */
       .hero {
@@ -430,8 +418,8 @@
                 <li>Utilize Excel formulas, pivot tables, and dashboards to visualize and communicate financial performance.</li>
                 <li>Implement minimum stock level standards based on daily update reports to prevent supply shortages.</li>
                 <li>Organize and archive digital records of invoices, receipts, and financial reports in Google Drive.</li>
-                <li>Communicate remotely with on-site staff through WhatsApp and email to streamline day-to-day operations.</li><br>                        
-          </details>
+                <li>Communicate remotely with on-site staff through WhatsApp and email to streamline day-to-day operations.</li>                        
+          </details><br>
         </ul>    
         
         <h3>📌 <b>Purchasing, Marketing, and Barging Coordinator</b></h3>
@@ -449,8 +437,8 @@
                 <li>Issued key barging documents, including Shipping Instruction, Commercial Invoice, PNBP Royalty Invoice, Packing List (P/L), Bill of Lading (B/L), Certificate of Origin (COO), Statement of Fact (SOF), and Notification of Readiness (NOR), in compliance with standard sea freight procedures (Tugboat & Barge).</li>
                 <li>Coordinated daily with Barging Teams for hauling activities from the Stockpile to the Loading Port (Jetty) until the loading process onto the Vessel, ensuring smooth loading of ~10,000 MT of Nickel Ore per Vessel.</li>
                 <li>Performed accurate data entry for 300+ barging and royalty digital documents into the MINERBA Online system (MOMS), ensuring 100% compliance with Sailing Permit requirements set by the Port Authority (Syahbandar).</li>
-                <li>Managed end-to-end shipment logistics, ensuring safe and timely delivery of Nickel Ore until arrival at the Discharging Port.</li><br>                          
-          </details>          
+                <li>Managed end-to-end shipment logistics, ensuring safe and timely delivery of Nickel Ore until arrival at the Discharging Port.</li>                          
+          </details><br>          
         </ul>      
         
         <h3>📌 <b>Operations and Production Admin</b></h3>
@@ -465,8 +453,8 @@
                 <li>Executed daily data entry of production reports detailing material inputs (<b>Nickel Ore</b>), work-in-process (<b>Sintered Ore</b>), and product outputs (<b>Nickel Pig Iron</b>) into the MINERBA Online system (MOMS) for regulatory reporting.</li>
                 <li>Submitted quarterly inventory reports through the MINERBA Online system (MOMS) by monitoring stock levels of materials and finished goods throughout production lines.</li>
                 <li>Created Packing Lists during container cargo loading as part of export activities, required for Finished Goods Shipments.</li>
-                <li>Submitted over 100 export digital documents into the KITE Online system with zero data entry errors for Customs Clearance and Sailing Permit Approval.</li><br>                        
-          </details>          
+                <li>Submitted over 100 export digital documents into the KITE Online system with zero data entry errors for Customs Clearance and Sailing Permit Approval.</li>                        
+          </details><br>          
         </ul>      
         
         <h3>📌 <b>Production Planning and Inventory Control Admin</b></h3>
@@ -483,8 +471,8 @@
                 <li>Conducted stock opname to verify raw material inventory levels in warehouse facilities.</li>
                 <li>Submitted purchase requests to the Purchasing Department to prevent stock-outs and support uninterrupted production schedules.</li>
                 <li>Received and verified types and quantities of goods supplied by the Purchasing Department, based on submitted purchase requests.</li>
-                <li>Organized raw materials and finished goods using FIFO workflow, according to warehouse storage layout.</li><br>                        
-          </details>        
+                <li>Organized raw materials and finished goods using FIFO workflow, according to warehouse storage layout.</li>                        
+          </details><br>        
         </ul>    
         
         <h3>📌 <b>Management Trainee – PPIC</b></h3>
@@ -588,8 +576,7 @@
         <ul>
           <details open>
             <summary style="color: #1e3a8a; cursor: pointer;"><strong>Directorate General of Mineral and Coal, Ministry of Energy and Mineral Resources (DIT. MINERBA, KEM. ESDM)</strong></summary><br>
-              &emsp;Active Member – MOMS & ERKAB Working Group (MINERBA Online Monitoring System & Work Plan and<br>
-              &emsp;Budget System) | <em>Oct 2018 – Present</em></p><br>           
+              &emsp;Active Member – MOMS & ERKAB Working Group (MINERBA Online Monitoring System & Work Plan and Budget System) | <em>Oct 2018 – Present</em>           
           </details>    
         </ul>    
       </section>
