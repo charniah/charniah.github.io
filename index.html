@@ -8,13 +8,18 @@
   <meta name="theme-color" content="#1e3c72"> <!-- Mobile Friendly, agar tampilan di browser mobile (Android) ikut berubah -->
   <title>Citra Harniah – Professional Portfolio</title>
   <style>    
-    //* html { scroll-behavior: smooth; scroll-padding-top: 80px; } * memberi jarak agar tidak lompat ke atas * *//
-    //* :target { scroll-margin-top: 0; !important; } * gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas * *//  
+    html {
+      scroll-behavior: smooth; 
+      scroll-padding-top: 80px;
+    } /* memberi jarak agar tidak lompat ke atas */ 
+    :target { 
+      scroll-margin-top: 0;
+    } /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */  
     body {
-      font-family: "Palatino Linotype"; 
+      font-family: "Palatino Linotype", serif; 
       background-color: #f9f9f7; 
       color: #333; 
-      line-height: 1.25; //* 1.6; *//
+      line-height: 1.6; //* 1.25; *//
       margin: 0; 
       padding: 0;
     }
@@ -33,7 +38,7 @@
     header h1 {
       margin: 0; 
       font-size: 2rem; 
-      letter-spacing: 0.5px; 
+      letter-spacing: 1px; //* 0.5px; *//
       animation: fadeSlideDown 1s ease;       
     }
     header p { margin: 5px 0; font-size: 1rem; }
@@ -47,37 +52,6 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
       padding: 40px 50px;
     }
-
-    /* ANIMATIONS */
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    } 
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInLightbox {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    @keyframes slideInText { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }    
-    @keyframes slideInImage { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } } 
-
-    /* TITLES & TEXT */
-    h2 { font-size: 1.4rem; color: #1e3c72; border-bottom: 2px solid #2a5298; padding-bottom: 5px; margin-top: 40px; display: flex; align-items: center; gap: 8px; }
-    h3 { color: #2a5298; margin-top: 20px; margin-bottom: 5px; }
-    ul { list-style: none; padding-left: 15px; }
-    ul li::before { content: "• "; color: #2a5298; font-weight: bold; }
-
-    /* DETAILS INTERACTION */
-    details summary {      
-      cursor: pointer;
-      transition: color 0.3s ease; /* hover transition, agar saat diklik terasa interaktif */
-    }    
-    details summary:hover {
-      color: #005fa3;
-    }   
     
     /* HERO SECTION */
     .hero {      
@@ -95,22 +69,55 @@
       min-width: 300px; 
       opacity: 0; 
       transform: translateX(-50px); 
-      animation: fadeSlideUp 1.2s ease forwards; //* slideInImage, ease-out *//
-    }
+      animation: fadeSlideUp 1.2s ease forwards; //* slideInText 1.2s ease-out forwards *//
+    }    
+    .hero-text h1 { font-size: 2.4rem; color: #003366; /* biru-abu profesional */ margin-bottom: 20px; line-height: 1.3; } 
+    .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; }
+    img { max-width: 100%; height: auto; }
     .hero img {
       width: 420px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateX(50px);
-      animation: fadeSlideUp 1.4s ease forwards; //* slideInImage, ease-out *//
+      animation: fadeSlideUp 1.4s ease forwards; //* slideInImage 1.4s ease-out forwards *//
       animation-delay: 0.4s;
       height: auto;   
     }
-    .hero-text h1 { font-size: 2.4rem; color: #003366; /* biru-abu profesional */ margin-bottom: 20px; line-height: 1.0; //* line-height: 1.3 *// } 
-    .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; } 
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }      
+      .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        animation: fadeIn 1.2s ease-out forwards;
+      }      
+      .hero img {
+        width: 100%;
+        max-width: 400px;
+        animation: fadeIn 1.4s ease-out forwards;
+      }       
+    }
 
-    /* BUTTONS */    
+    /* TITLES & TEXT */
+    h2 { font-size: 1.4rem; color: #1e3c72; border-bottom: 2px solid #2a5298; padding-bottom: 5px; margin-top: 40px; display: flex; align-items: center; gap: 8px; }
+    h3 { color: #2a5298; margin-top: 20px; margin-bottom: 5px; }
+    ul { list-style: none; padding-left: 15px; }
+    ul li::before { content: "• "; color: #2a5298; font-weight: bold; }
+
+    /* DETAILS INTERACTION - Desain & Visual Hierarchy */
+    details summary {    
+      cursor: pointer; 
+    }    
+    details summary:hover {
+      color: #005fa3;
+      transition: 0.3s ease;
+    } /* hover transition untuk "summary", agar saat diklik, terasa interaktif: */
+
+    /* BUTTONS */ 
     .hero-buttons {
       display: flex; 
       gap: 15px;
@@ -127,8 +134,8 @@
     }
     .btn-primary {
       background-color: #003f6b; 
-      color: white; //* cursor: pointer; *//
-    }    
+      color: white; cursor: pointer; 
+    } 
     .btn-primary:hover {
       background-color: #005fa3; 
       transform: translateY(-2px);
@@ -143,7 +150,27 @@
       transform: translateY(-2px);
     }
 
-    /* GALLERY LIGHTBOX */
+    /* ANIMATIONS */
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    } 
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInLightbox {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInText { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }    
+    @keyframes slideInImage { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+
+    /* STYLE UNTUK LIGHTBOX */
     .lightbox {
       display: none;
       position: fixed;
@@ -190,8 +217,7 @@
     .gallery img:hover {
       transform: scale(1.03);
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-    img { max-width: 100%; height: auto; } 
+    }    
 
     /* FOOTER */
     .footer {
@@ -200,41 +226,6 @@
       color: #555;
       margin-top: 50px;
       padding: 20px 0;
-    }
-           
-    /* RESPONSIVE (Small phones) */
-    //* @media (max-width: 768px) {
-      .container { padding: 25px; }
-      .hero { flex-direction: column; text-align: center; }
-      .hero img { width: 100%; max-width: 380px; }
-    } *//
-    //* @media (max-width: 480px) {
-      .container { margin: 16px; padding: 20px; }
-      h2 { font-size: 1rem; }
-      header h1 { font-size: 1.2rem; }
-    } *//
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }      
-      .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-        animation: fadeIn 1.2s ease-out forwards;
-      }      
-      .hero img {
-        width: 100%;
-        max-width: 400px;
-        animation: fadeIn 1.4s ease-out forwards;
-      }      
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }    
-    } 
-    section {
-      margin-bottom: 40px; /* spacing bawah antar section agar tampilan tidak padat di layar kecil */      
     } 
     
     /* Default link click */
@@ -255,7 +246,19 @@
     }
     .draggable: active {
       cursor: grabbing;
-    } 
+    }
+
+    /* RESPONSIVE (Small phones) */
+    //* @media (max-width: 768px) {
+      .container { padding: 25px; }
+      .hero { flex-direction: column; text-align: center; }
+      .hero img { width: 100%; max-width: 380px; }
+    } *//
+    //* @media (max-width: 480px) {
+      .container { margin: 16px; padding: 20px; }
+      h2 { font-size: 1rem; }
+      header h1 { font-size: 1.2rem; }
+    } *//
     
     /* ===== Small phones - max-width 480px ===== */    
     @media (max-width: 480px) {      
@@ -265,19 +268,16 @@
         --space-sm: 12px;
         --space-md: 18px;
         --font-base: 14px; /* body font */
-        --font-h1: 18px; //* 20px; *//
+        --font-h1: 20px; //* 18px; *//
         --font-h2: 16px;
         --font-h3: 14px;
-      }
-      body {         
-        line-height: 1.0;         
-      }  
+      }        
       header {
         padding: 18px 12px; !important; /* lebih compact */        
       }    
       header h1 {
         font-size: 1.15rem; /* ~18-20px */
-        line-height: 1.0; //* 1.25; *//        
+        line-height: 1.25; //* 1.0; *//        
       }   
       header p {        
         font-size: 0.85rem;
@@ -286,9 +286,14 @@
       .container {
         max-width: 100%;
         margin: 16px;
-        padding: 18px; //* 20px; *// /* kurang dari desktop */
-        border-radius: 8px; //* 10px; *//
+        padding: 20px; //* 18px; *// /* kurang dari desktop */
+        border-radius: 10px; //* 8px; *//
       }
+      /* SECTION - Desain & Visual Hierarchy */
+      section {
+        margin-bottom: 40px; 
+      } /* spacing bawah antar section, agar tampilan tidak padat di layar kecil */
+      
       /* HERO adjustments */
       .hero {
         padding: 28px 6%;
@@ -332,7 +337,7 @@
       h3 {
         font-size: 0.95rem;
       }
-      * Lists & details *
+      /* Lists & details */
       ul {
         padding-left: 12px;
         font-size: 0.95rem;
