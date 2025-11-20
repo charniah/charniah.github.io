@@ -16,10 +16,10 @@
       scroll-margin-top: 0;
     } /* gambar di-click → lightbox terbuka, posisi scroll tidak naik otomatis ke atas */  
     body {
-      font-family: "Palatino Linotype", serif; 
+      font-family: "Palatino Linotype"; 
       background-color: #f9f9f7; 
       color: #333; 
-      line-height: 1.6; //* 1.25; *//
+      line-height: 1.6; 
       margin: 0; 
       padding: 0;
     }
@@ -27,10 +27,10 @@
     /* HEADER */
     header {
       //* background-clip: border-box !important; *//
-      background: linear-gradient(90deg, #1e3c72, #2a5298); !important; 
-      color: white; !important;
-      text-align: center; !important;
-      padding: 40px 20px; !important;
+      background: linear-gradient(90deg, #1e3c72, #2a5298); //* !important; *//
+      color: white; //* !important; *//
+      text-align: center; //* !important; *//
+      padding: 40px 20px; //* !important; *//
       position: sticky; 
       top: 0; 
       z-index: 100; 
@@ -38,7 +38,7 @@
     header h1 {
       margin: 0; 
       font-size: 2rem; 
-      letter-spacing: 1px; //* 0.5px; *//
+      letter-spacing: 0.8px; //* 0.5px; *//
       animation: fadeSlideDown 1s ease;       
     }
     header p { margin: 5px 0; font-size: 1rem; }
@@ -71,7 +71,7 @@
       transform: translateX(-50px); 
       animation: fadeSlideUp 1.2s ease forwards; //* slideInText 1.2s ease-out forwards *//
     }    
-    .hero-text h1 { font-size: 2rem; color: #003366; /* biru-abu profesional */ margin-bottom: 20px; line-height: 1.0; } //* font-size: 2.4rem; line-height: 1.3; *//
+    .hero-text h1 { font-size: 2.4rem; color: #003366; /* biru-abu profesional */ margin-bottom: 20px; line-height: 1.0; } //* font-size: 2rem; line-height: 1.3; *//
     .hero-text p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 30px; }
     img { max-width: 100%; height: auto; }
     .hero img {
@@ -110,12 +110,12 @@
 
     /* DETAILS INTERACTION - Desain & Visual Hierarchy */
     details summary {    
-      cursor: pointer; 
+      cursor: pointer;
+      transition: color 0.3s ease; /* hover transition untuk "summary", agar saat diklik, terasa interaktif: */
     }    
     details summary:hover {
-      color: #005fa3;
-      transition: 0.3s ease;
-    } /* hover transition untuk "summary", agar saat diklik, terasa interaktif: */
+      color: #005fa3;      
+    } 
 
     /* BUTTONS */ 
     .hero-buttons {
@@ -268,12 +268,12 @@
         --space-sm: 12px;
         --space-md: 18px;
         --font-base: 14px; /* body font */
-        --font-h1: 20px; //* 18px; *//
+        --font-h1: 18px; //* 20px; *//
         --font-h2: 16px;
         --font-h3: 14px;
       }        
       header {
-        padding: 18px 12px; !important; /* lebih compact */        
+        padding: 18px 12px; //* !important; *// /* lebih compact */        
       }    
       header h1 {
         font-size: 1.15rem; /* ~18-20px */
@@ -286,8 +286,8 @@
       .container {
         max-width: 100%;
         margin: 16px;
-        padding: 20px; //* 18px; *// /* kurang dari desktop */
-        border-radius: 10px; //* 8px; *//
+        padding: 18px; //* 20px; *// /* kurang dari desktop */
+        border-radius: 8px; //* 10px; *//
       }
       /* SECTION - Desain & Visual Hierarchy */
       section {
@@ -307,7 +307,7 @@
         order: 1;
       }
       .hero-text h1 {        
-        font-size: 1.0rem; //* 1.25rem; *// /* lebih kecil agar muat */
+        font-size: 1.25rem; //* 1.0rem; *// /* lebih kecil agar muat */
         margin-bottom: 12px;
       }
       .hero-text p {
